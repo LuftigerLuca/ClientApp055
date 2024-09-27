@@ -1,0 +1,22 @@
+﻿<Window x:Class="De.HsFlensburg.ClientApp055.Ui.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:De.HsFlensburg.ClientApp055.Ui.Desktop"
+        xmlns:model="clr-namespace:De.HsFlensburg.ClientApp055.Business.Model.BusinessObjects;assembly=Business.Model"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="120" Width="500">
+    <Window.Resources>
+        <model:Client x:Key="Hansi" Id="1234" Name="Hansi Sittich"></model:Client>
+    </Window.Resources>
+    <Grid>
+        <UniformGrid>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Right">Identifier</Label>
+            <TextBox VerticalAlignment="Center" Text="{Binding Source={StaticResource Hansi}, Path=Id}"></TextBox>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Right">Name</Label>
+            <TextBox VerticalAlignment="Center" Text="{Binding Source={StaticResource Hansi}, Path=Name}"></TextBox>
+        </UniformGrid>
+        
+    </Grid>
+</Window>
