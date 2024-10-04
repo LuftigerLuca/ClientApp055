@@ -1,4 +1,5 @@
-﻿using System;
+﻿using De.HsFlensburg.ClientApp055.Logic.Ui.Wrapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace De.HsFlensburg.ClientApp055.Ui.Desktop
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var collection = this.myDataGrid.ItemsSource as ClientCollectionViewModel;
+            var first = collection.FirstOrDefault();
+            first.Model.Name = "Rename in the model";
         }
     }
 }

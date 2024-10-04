@@ -4,19 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:De.HsFlensburg.ClientApp055.Ui.Desktop"
-        xmlns:model="clr-namespace:De.HsFlensburg.ClientApp055.Business.Model.BusinessObjects;assembly=Business.Model"
+        xmlns:viewModel="clr-namespace:De.HsFlensburg.ClientApp055.Logic.Ui.Wrapper;assembly=Logic.Ui"
         mc:Ignorable="d"
         Title="MainWindow" Height="120" Width="500">
     <Window.Resources>
-        <model:Client x:Key="Hansi" Id="1234" Name="Hansi Sittich"></model:Client>
+        <viewModel:ClientCollectionViewModel x:Key="myList"></viewModel:ClientCollectionViewModel>
     </Window.Resources>
     <Grid>
-        <UniformGrid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <UniformGrid Grid.Column="0" Rows="3">
             <Label VerticalAlignment="Center" HorizontalAlignment="Right">Identifier</Label>
-            <TextBox VerticalAlignment="Center" Text="{Binding Source={StaticResource Hansi}, Path=Id}"></TextBox>
+            <TextBox VerticalAlignment="Center" Text="{Binding ElementName=myDataGrid, Path=SelectedItem.Id}"></TextBox>
             <Label VerticalAlignment="Center" HorizontalAlignment="Right">Name</Label>
-            <TextBox VerticalAlignment="Center" Text="{Binding Source={StaticResource Hansi}, Path=Name}"></TextBox>
+            <TextBox VerticalAlignment="Center" Text="{Binding ElementName=myDataGrid, Path=SelectedItem.Name}"></TextBox>
+            <Button Click="Button_Click">Rename first item</Button>
+            <Button Click="DebugMainWindow">Debug MainWindow-Object</Button>
         </UniformGrid>
+        <DataGrid Grid.Column="1" Name="myDataGrid" ItemsSource="{Binding Source={StaticResource myList}}"></DataGrid>
         
     </Grid>
 </Window>

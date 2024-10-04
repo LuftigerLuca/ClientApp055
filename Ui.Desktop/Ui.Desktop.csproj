@@ -95,9 +95,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Business.Model\Business.Model.csproj">
-      <Project>{5b8e4933-f0b1-46b4-bd66-737abbef2b63}</Project>
-      <Name>Business.Model</Name>
+    <ProjectReference Include="..\Logic.Ui\Logic.Ui.csproj">
+      <Project>{678d9742-f4d9-4892-a321-3ada4fddbc8f}</Project>
+      <Name>Logic.Ui</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
