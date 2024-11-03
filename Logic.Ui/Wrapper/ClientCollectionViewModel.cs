@@ -1,22 +1,25 @@
 ﻿using De.HsFlensburg.ClientApp055.Business.Model.BusinessObjects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using De.HsFlensburg.ClientApp055.Logic.Ui.Base;
 
 namespace De.HsFlensburg.ClientApp055.Logic.Ui.Wrapper
 {
-    public class ClientCollectionViewModel: List<ClientViewModel>
+    public class ClientCollectionViewModel : ViewModelSyncCollection<ClientViewModel, Client, ClientCollection>
     {
-        private ClientCollection myClients;
-        public ClientCollectionViewModel()
+        public override void NewModelAssigned()
         {
-            myClients = new ClientCollection();
-
-            foreach (Client client in myClients)
+            foreach (var cvm in this)
             {
-                this.Add(new ClientViewModel(client));
+                var modelPropChanged = cvm.Model as INotifyPropertyChanged;
+                if (modelPropChanged != null)
+                {
+                    modelPropChanged.PropertyChanged += cvm.OnPropertyChangedInModel;
+                }
             }
         }
     }

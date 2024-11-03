@@ -41,7 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\IViewModel.cs" />
+    <Compile Include="Base\ViewModelBase.cs" />
+    <Compile Include="Base\ViewModelSyncCollection.cs" />
+    <Compile Include="MessageBusMessages\OpenNewClientWindowMessage.cs" />
+    <Compile Include="RelayCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModelLocator.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\NewClientWindowViewModel.cs" />
     <Compile Include="Wrapper\ClientCollectionViewModel.cs" />
     <Compile Include="Wrapper\ClientViewModel.cs" />
   </ItemGroup>
@@ -49,6 +57,14 @@
     <ProjectReference Include="..\Business.Model\Business.Model.csproj">
       <Project>{5b8e4933-f0b1-46b4-bd66-737abbef2b63}</Project>
       <Name>Business.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.MessageBus\Services.MessageBus.csproj">
+      <Project>{22531ae3-b286-4162-b7ad-72fdec71506d}</Project>
+      <Name>Services.MessageBus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.SerializationService\Services.SerializationService.csproj">
+      <Project>{36232a3a-9efb-48b9-8f24-3972a3661d07}</Project>
+      <Name>Services.SerializationService</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Ui", "Logic.Ui\Logic.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.MessageBus", "Services.MessageBus\Services.MessageBus.csproj", "{22531AE3-B286-4162-B7AD-72FDEC71506D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.SerializationService", "Services.SerializationService\Services.SerializationService.csproj", "{36232A3A-9EFB-48B9-8F24-3972A3661D07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{22531AE3-B286-4162-B7AD-72FDEC71506D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22531AE3-B286-4162-B7AD-72FDEC71506D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22531AE3-B286-4162-B7AD-72FDEC71506D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36232A3A-9EFB-48B9-8F24-3972A3661D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36232A3A-9EFB-48B9-8F24-3972A3661D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36232A3A-9EFB-48B9-8F24-3972A3661D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36232A3A-9EFB-48B9-8F24-3972A3661D07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{5B8E4933-F0B1-46B4-BD66-737ABBEF2B63} = {C6BCBF45-6256-4850-B93C-2A14B2EE4152}
 		{678D9742-F4D9-4892-A321-3ADA4FDDBC8F} = {63BD169C-78D8-404F-8678-14D3B2BFD8F1}
 		{22531AE3-B286-4162-B7AD-72FDEC71506D} = {E952A764-938C-43B5-A9BD-71065DE19968}
+		{36232A3A-9EFB-48B9-8F24-3972A3661D07} = {E952A764-938C-43B5-A9BD-71065DE19968}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {207ABC8D-3009-4218-B114-99BDDA062964}
