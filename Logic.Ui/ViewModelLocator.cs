@@ -8,12 +8,13 @@ namespace De.HsFlensburg.ClientApp055.Logic.Ui
         public ClientCollectionViewModel TheClientCollectionViewModel { get; set; }
         public MainWindowViewModel TheMainWindowViewModel { get; set; }
         public NewClientWindowViewModel TheNewClientWindowViewModel { get; set; }
-        
+
         public ViewModelLocator()
         {
             TheClientCollectionViewModel = new ClientCollectionViewModel();
             TheMainWindowViewModel = new MainWindowViewModel(TheClientCollectionViewModel);
-            TheNewClientWindowViewModel = new NewClientWindowViewModel(TheClientCollectionViewModel);
+            TheNewClientWindowViewModel =
+                new NewClientWindowViewModel(TheClientCollectionViewModel);
         }
     }
 }

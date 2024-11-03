@@ -27,8 +27,9 @@ namespace De.HsFlensburg.ClientApp055.Logic.Ui.ViewModels
         public MainWindowViewModel(ClientCollectionViewModel viewModelCollection)
         {
             modelFileHandler = new ModelFileHandler();
-            pathForSerialization = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) +
-                                   "\\ClientCollectionSerialization\\MyClients.cc";
+            pathForSerialization =
+                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) +
+                "\\ClientCollectionSerialization\\MyClients.cc";
             RenameValueInModelCommand = new RelayCommand(RenameValueInModel);
             SaveCommand = new RelayCommand(SaveModel);
             LoadCommand = new RelayCommand(LoadModel);

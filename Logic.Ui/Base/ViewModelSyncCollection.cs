@@ -66,11 +66,13 @@ namespace De.HsFlensburg.ClientApp055.Logic.Ui.Base
             switch (e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
-                    foreach (var model in e.NewItems.OfType<TypeViewModel>().Select(v => v.Model).OfType<TypeModel>())
+                    foreach (var model in e.NewItems.OfType<TypeViewModel>().Select(v => v.Model)
+                                 .OfType<TypeModel>())
                         Model.Add(model);
                     break;
                 case NotifyCollectionChangedAction.Remove:
-                    foreach (var model in e.OldItems.OfType<TypeViewModel>().Select(v => v.Model).OfType<TypeModel>())
+                    foreach (var model in e.OldItems.OfType<TypeViewModel>().Select(v => v.Model)
+                                 .OfType<TypeModel>())
                         Model.Remove(model);
                     break;
                 case NotifyCollectionChangedAction.Reset:

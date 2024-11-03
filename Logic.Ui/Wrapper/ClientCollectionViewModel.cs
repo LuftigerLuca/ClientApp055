@@ -9,7 +9,9 @@ using De.HsFlensburg.ClientApp055.Logic.Ui.Base;
 
 namespace De.HsFlensburg.ClientApp055.Logic.Ui.Wrapper
 {
-    public class ClientCollectionViewModel : ViewModelSyncCollection<ClientViewModel, Client, ClientCollection>
+    public class
+        ClientCollectionViewModel : ViewModelSyncCollection<ClientViewModel, Client,
+        ClientCollection>
     {
         public override void NewModelAssigned()
         {
